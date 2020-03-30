@@ -446,7 +446,7 @@ MonoBehaviour:
   - {fileID: 526907566}
   - {fileID: 2110756618}
   - {fileID: 596305227}
-  offset: {x: 0, y: 0, z: 3.01}
+  offset: {x: 5, y: 0, z: 0}
   camVelocity: 1
 --- !u!1 &1010304712
 GameObject:
