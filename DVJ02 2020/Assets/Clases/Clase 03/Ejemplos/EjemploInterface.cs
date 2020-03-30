@@ -6,7 +6,6 @@ namespace DVJ02.Clase03
 {
     public interface EjemploInterface
     {
-
         // Use this for initialization
         void InterfaceMethod01();
 

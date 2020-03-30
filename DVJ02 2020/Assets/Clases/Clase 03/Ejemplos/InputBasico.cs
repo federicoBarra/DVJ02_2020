@@ -11,7 +11,7 @@ public class InputBasico : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
             Debug.Log("Alpha1 presionado");
 
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis("Horizontal"); // [-1, 1]
         float vertical = Input.GetAxis("Vertical");
 
         if (Input.GetKeyUp(KeyCode.Space))
