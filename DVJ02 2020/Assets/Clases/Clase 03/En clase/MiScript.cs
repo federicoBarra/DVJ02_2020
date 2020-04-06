@@ -2,74 +2,77 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiScript : MonoBehaviour
+namespace DVJ02.Clase03.EnClase
 {
-	public int Pepe;
-
-	public int[] arrayDeInts;
-	public List<int> listaDeInts;
-	public List<string> listaDeString;
-
-	public Auto auto01;
-	public Auto auto02;
-
-	public float upSpeed = 5;
-
-	void Awake()
+	public class MiScript : MonoBehaviour
 	{
-		Debug.Log("awake");
-	}
+		public int Pepe;
 
-	void OnEnable()
-	{
-		Debug.Log("OnEnabled");
-		Debug.Log(auto01.Velocidad);
-		Debug.Log(auto02.Velocidad);
-	}
+		public int[] arrayDeInts;
+		public List<int> listaDeInts;
+		public List<string> listaDeString;
 
-	void OnDisable()
-	{
-		Debug.Log("OnDisabled");
-	}
+		public Auto auto01;
+		public Auto auto02;
 
-	// Start is called before the first frame update
-	void Start()
-    {
-		listaDeInts.Add(78);
+		public float upSpeed = 5;
 
-	    listaDeInts.RemoveAt(0);
+		void Awake()
+		{
+			Debug.Log("awake");
+		}
 
-	    transform.position += Vector3.up;
+		void OnEnable()
+		{
+			Debug.Log("OnEnabled");
+			Debug.Log(auto01.Velocidad);
+			Debug.Log(auto02.Velocidad);
+		}
 
-		//Debug.Log("Usando For");
-		//for (int i = 0; i < listaDeInts.Count; i++)
-		//{
-		//    int arrayDeInt = listaDeInts[i];
-		//    Debug.Log(arrayDeInt);
-		//}
-		//
-		//Debug.Log("Usando Foreach");
-		//foreach (int arrayDeInt in arrayDeInts)
-		//{
-		//	Debug.Log(arrayDeInt);
-		//}
+		void OnDisable()
+		{
+			Debug.Log("OnDisabled");
+		}
 
-	}
+		// Start is called before the first frame update
+		void Start()
+		{
+			listaDeInts.Add(78);
 
-    // Update is called once per frame
-    void Update()
-    {
-	    transform.position += Vector3.up * Time.deltaTime * upSpeed;
-		//Debug.Log("Update");
-	}
+			listaDeInts.RemoveAt(0);
 
-	void FixedUpdate()
-	{
-		//Debug.Log("FixedUpdate");
-	}
+			transform.position += Vector3.up;
 
-	void OnDeath()
-	{
-		//score + 10
+			//Debug.Log("Usando For");
+			//for (int i = 0; i < listaDeInts.Count; i++)
+			//{
+			//    int arrayDeInt = listaDeInts[i];
+			//    Debug.Log(arrayDeInt);
+			//}
+			//
+			//Debug.Log("Usando Foreach");
+			//foreach (int arrayDeInt in arrayDeInts)
+			//{
+			//	Debug.Log(arrayDeInt);
+			//}
+
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+			transform.position += Vector3.up * Time.deltaTime * upSpeed;
+			//Debug.Log("Update");
+		}
+
+		void FixedUpdate()
+		{
+			//Debug.Log("FixedUpdate");
+		}
+
+		void OnDeath()
+		{
+			//score + 10
+		}
 	}
 }

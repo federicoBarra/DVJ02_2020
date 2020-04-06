@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Auto : MonoBehaviour
+namespace DVJ02.Clase03.EnClase
 {
-	public float Velocidad = 50;
+	public class Auto : MonoBehaviour
+	{
+		public float Velocidad = 50;
+	}
 }

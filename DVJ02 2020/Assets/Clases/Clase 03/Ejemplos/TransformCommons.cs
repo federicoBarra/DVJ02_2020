@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DVJ02.Clase03.EnClase;
 using UnityEngine;
 
 namespace DVJ02.Clase03

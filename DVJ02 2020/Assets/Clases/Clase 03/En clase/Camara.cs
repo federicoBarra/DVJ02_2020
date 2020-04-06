@@ -3,49 +3,56 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class Camara : MonoBehaviour
+namespace DVJ02.Clase03.EnClase
 {
-	public float cadaCuantoCambioDePlaneta = 5;
-	public float timer;
-	public GameObject[] planetas;
-	// indice de planeta actual
-	private int planetaActual = 0;
-	public Vector3 offset;
-	public float camVelocity;
+	public class Camara : MonoBehaviour
+	{
+		public float cadaCuantoCambioDePlaneta = 5;
+		public float timer;
+
+		public GameObject[] planetas;
+
+		// indice de planeta actual
+		private int planetaActual = 0;
+		public Vector3 offset;
+		public float camVelocity;
 
 
-    void Start()
-    {
-        
-    }
-   
-    void LateUpdate()
-    {
-	    timer += Time.deltaTime;
+		void Start()
+		{
 
-	    if (timer > cadaCuantoCambioDePlaneta)
-	    {
-		    planetaActual++;
+		}
 
-		    //if (planetaActual >= planetas.Length)
-			//    planetaActual = 0;
+		void LateUpdate()
+		{
+			timer += Time.deltaTime;
 
-		    planetaActual = planetaActual % planetas.Length;
-			// 0 % 3 = 0
-			// 1 % 3 = 1
-			// 2 % 3 = 2
-		    // 3 % 3 = 0
-			timer = 0;
-	    }
+			if (timer > cadaCuantoCambioDePlaneta)
+			{
+				planetaActual++;
 
-	    Vector3 newPos = planetas[planetaActual].transform.position + offset;
+				//if (planetaActual >= planetas.Length)
+				//    planetaActual = 0;
 
-	    Vector3 currentPos = transform.position;
+				planetaActual = planetaActual % planetas.Length;
+				// 0 % 3 = 0
+				// 1 % 3 = 1
+				// 2 % 3 = 2
+				// 3 % 3 = 0
+				timer = 0;
+			}
 
-	    Vector3 direction = newPos - currentPos;
+			Vector3 newPos = planetas[planetaActual].transform.position + offset;
 
-	    direction = direction.normalized;
+			Vector3 currentPos = transform.position;
 
-		transform.position += direction * Time.deltaTime * camVelocity;
-    }
+			Vector3 direction = newPos - currentPos;
+
+			direction = direction.normalized;
+
+
+			if (Vector3.Distance(currentPos, newPos) > 2)
+				transform.position += direction * Time.deltaTime * camVelocity;
+		}
+	}
 }
