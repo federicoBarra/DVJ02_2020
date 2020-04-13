@@ -17,13 +17,19 @@ namespace DVJ02.Clase04
 	    public List<Material> planetMaterials;
 	    public Material[] planetMaterialsAsArray;
 
+	    public Dictionary<string, int> radioPorPlaneta;
+
 	    public List<Planeta> generatedPlanets = new List<Planeta>();
 
 	    private float time = 0;
 
 		private void Start()
         {
-	        //planetMaterialsAsArray.Length
+			radioPorPlaneta.Add("Tierra", 987123876);
+	        radioPorPlaneta.Add("Marte", 987123876);
+
+			Debug.Log(radioPorPlaneta["Marte"]);
+			//planetMaterialsAsArray.Length
 			//Random.Range(0,2f)
 			for (int i = 0; i < 10; i++)
             {
@@ -36,8 +42,9 @@ namespace DVJ02.Clase04
 	            int validIndex = i % planetMaterials.Count;
 	            go.GetComponent<MeshRenderer>().material = planetMaterials[validIndex];
 
-	            p.radius = i * 3;
-	            p.sun = gameObject.transform;
+				p.Initialize(gameObject.transform, i * 3, 654);
+	            //p.radius = i * 3;
+	            //p.sun = gameObject.transform;
 
 	            generatedPlanets.Add(p);
 	            cam.planetas.Add(go);

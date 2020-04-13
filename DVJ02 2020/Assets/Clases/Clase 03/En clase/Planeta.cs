@@ -14,6 +14,12 @@ namespace DVJ02.Clase03.EnClase
 		public float rotationSpeed = 10;
 		public Vector3 rotationVector;
 
+		public void Initialize(Transform _sun, float _radius, int etc)
+		{
+			sun = _sun;
+			radius = _radius;
+		}
+
 		void Update()
 		{
 
