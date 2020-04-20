@@ -7,20 +7,25 @@ namespace DVJ02.Clase05
 {
     public class UIBasisExample : MonoBehaviour
     {
-
         public Text textObject;
+	    public int numero = 500000;
+	    public int numero02;
 
-        // Use this for initialization
-        private void Start()
+		// Use this for initialization
+		private void Start()
         {
-            textObject.text = "Texto por programacion";
+	        Text[] texts = FindObjectsOfType<Text>();
+
+			textObject.text = numero.ToString("G");
+
+			Debug.Log("Hola que tal: " + numero);
+
         }
 
         // Update is called once per frame
         private void Update()
         {
-
-        }
+		}
 
         public void ButtonPressed()
         {

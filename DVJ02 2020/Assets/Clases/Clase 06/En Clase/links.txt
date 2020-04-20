@@ -1,0 +1,16 @@
+https://docs.unity3d.com/ScriptReference/Physics.Raycast.html
+https://docs.unity3d.com/ScriptReference/Ray.html
+https://docs.unity3d.com/ScriptReference/RaycastHit.html
+https://docs.unity3d.com/ScriptReference/Physics.Linecast.html
+https://docs.unity3d.com/ScriptReference/Camera.ScreenPointToRay.html
+https://docs.unity3d.com/ScriptReference/Quaternion.Angle.html
+https://docs.unity3d.com/ScriptReference/Quaternion.html
+https://docs.unity3d.com/ScriptReference/Quaternion.SetLookRotation.html
+https://docs.unity3d.com/ScriptReference/Quaternion.LookRotation.html
+https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html
+https://www.tutorialspoint.com/csharp/csharp_operator_overloading.htm
+https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
+
+Raycast() will ignore a collider if the ray starts inside it.
+El Quaterion.Angle es independiente de los ejes y nunca va a dar mas de 180.
+
