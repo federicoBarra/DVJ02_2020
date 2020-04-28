@@ -39,8 +39,16 @@ namespace DVJ02.Clase06
 
 			//SET LOOK ROTATION USE
 			Quaternion q01 = Quaternion.identity;
-	        q01.SetLookRotation(pingPongTransform.position - SetLookRotation.position, Vector3.up); // similar to LookRotation
-	        SetLookRotation.rotation = Quaternion.Slerp(SetLookRotation.rotation, q01, Time.deltaTime/5);
+
+		    Vector3 pingV3 = pingPongTransform.position;
+		    Vector3 source = SetLookRotation.position;
+
+		    pingV3.x = 0;
+
+			q01.SetLookRotation(pingV3 - source, Vector3.up); // similar to LookRotation
+	        SetLookRotation.rotation = Quaternion.Slerp(SetLookRotation.rotation, q01, Time.deltaTime/ RotateTowardsSpeed);
+
+		    transform.Rotate(Vector3.up);
 
 			//ROTATE TOWARDS
 	        RotateTowards.rotation = Quaternion.RotateTowards(RotateTowards.rotation, RotateTowardsDestiny.rotation, RotateTowardsSpeed * Time.deltaTime);

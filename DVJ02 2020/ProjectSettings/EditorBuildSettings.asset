@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Clases/Clase 05/02 Scene Management/SceneManagementExample 02.unity
     guid: 48e187323c3cdbb488bbc3627da1d969
+  - enabled: 1
+    path: Assets/Clases/Clase 07/03 Persistencia de informacion/DontDestroy 01 Start.unity
+    guid: f08b237ba2e95eb43878658818c385d4
+  - enabled: 1
+    path: Assets/Clases/Clase 07/03 Persistencia de informacion/DontDestroy 02 Game.unity
+    guid: dc2f88fe26f5c7d46a333675df34f354
+  - enabled: 1
+    path: Assets/Clases/Clase 07/03 Persistencia de informacion/DontDestroy 03 End.unity
+    guid: 7e1a43b56d2608f43a973e6ee533bce9
   m_configObjects: {}

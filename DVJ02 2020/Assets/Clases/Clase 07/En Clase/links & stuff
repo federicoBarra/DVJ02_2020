@@ -1,0 +1,113 @@
+Clase 07
+Devoluciones:
+General:
+Como es que un pino puede controlarme el flow del juego?
+Uso del GameManager para controlar los estados del juego en vez de que lo controlen los objetos con menos autoridad.
+Prestar atención a la consola de Unity
+Presentación:
+NO cuesta nada poner unos cubos que simulen un nivel ;)
+
+Iñaki:
+TP 03:
+Orden en el proyecto. Scripts en carpeta de scripts etc.
+Nomenclatura C#
+Consola explotada con Debug.Log
+Nombrado de Objetos en el Hierarchy, que es Cube?
+
+if (shot==false)
+
+if (!shot)
+
+if (shot == true)
+
+if (shot)
+
+shot==false NO 
+----> !shot
+
+Nacho:
+TP 02
+Carpetas que no deben estar que no estén (ej: Library)
+UnassignedReferenceException: The variable starToOrbit of PlanetOribting has not been assigned.
+You probably need to assign the starToOrbit variable of the PlanetOribting script in the inspector.
+PlanetOribting.Update () (at Assets/Scripts/PlanetOribting.cs:38)
+Fijate que estas tratando de acceder al sol como prefab y no el que está en la escena.
+
+Fermin:
+TP 03:
+if(transform.rotation.x > 0.001f || transform.rotation.x < -0.001f || transform.rotation.z > 0.001f || transform.rotation.z < -0.001f)
+???? un poco cavernicola... no usemos los quaternions así directamente a menos que sepamos exactamente que estamos haciendo.
+Ship-Quaterions. Colliders
+Pin.cs
+ Esta clase controla un pino y todos los pinos a la vez? Diferenciar entre Pin y PinesManager
+
+Iker:
+TP 03
+onClickA() ??? métodos con nombres claros
+BallMovement.cs
+ Porque la bola decide que pinos se cayeron?
+ La UI la debería controlar un script separado.
+ void OnCollisionEnter(Collision collision)
+ Cada vez que colisiona checkea todos los pinos?
+ Checkea que cada pino tenga una rotacion perfecta de 90 grados?
+ 
+Lucio:
+Consola explotada con Debug.Log
+Terminar
+
+Buenas prácticas.
+Todos los scripts que manejen UI que empiecen con prefijo "UI" (ejemplo: UIManager, UIPlayerHud)
+Todo script relacionado con UI va en una carpeta UI
+Hacer un script general para la UI, no tener un componente por cada Texto o Botón a menos que dicho objeto tenga cierta complejidad.
+Los scripts que manejan la UI van en el Canvas o alguno de sus hijos. Supongamos que queremos pasar la UI a otro juego, tengo que pasar los otros objetos también...
+
+Nombres descriptivos en scripts
+Comentarios en código.
+Programar para el otro. O el YO del futuro!
+No Overengineering, menos es más. Cantidad de líneas de código, cantidad de archivos.
+No usar variables estáticas excepto en casos muy particulares.
+Coherencia de código. Si ponen private todas las private con su signature private, si no ponen nada, todas sin nada. No mezclar variables públicas con privadas.
+
+Variables que no se usan en el código, que no estén en el código (Unity tira un warning de variables no usadas).
+No tener métodos vacíos, por más que al generar el script Unity genere métodos como Start() y Update() si los métodos no tienen código, borrarlos.
+Que los componentes/scripts matcheen con el Gameobject asignado. Mal ejemplo: Un script de Loader en la Cámara. Si es necesario, crear un gameobject vacío con el nombre del script.
+
+if (variableBooleana == true) NO! Usar if (variableBooleana) o if (!variableBooleana) Recordar: menos es más.
+Nombres de clases/scripts/componentes. Si es un pino, que la clase se llame "Pino" y no "Pinos"
+
+Resoluciones de pantalla.
+Nombres descriptivos en GameObjects.
+Escenas selfplayable.
+
+Project Tab
+Find References in Scene.
+Usar estructura de carpetas similar a la mostrada anteriormente. Hierarchy Tab
+Usar Empty gameobjects como carpetas.
+
+Cuestiones básicas de Performance.
+No llamar funciones como GameObject.FindGameObjectsWithTag() o GetComponent() en el Update() (todos los frames). Son lentas, generan basura en memoria. Mejor cachearlas.
+Concatenar (+) strings es lento, no hacerlo en el update si lo que voy a mostrar no se modificó.
+Profiler.
+Al compartir un proyecto (entregar un tp)
+Comentar todos los Debug.log() o directamente borrarlos. Arte de programador
+
+Recursos gratis:
+https://www.turbosquid.com/Search/3D-Models/free
+https://www.cgtrader.com/free-3d-models
+https://free3d.com/
+https://kenney.nl/ 
+https://opengameart.org/
+http://usemodify.com/
+http://assetstore.unity3d.com
+Color 
+https://coolors.co/
+http://www.colourlovers.com/palettes
+http://colorpalettes.net/
+
+
+Meshes:
+https://en.wikipedia.org/wiki/Polygon_mesh
+https://docs.unity3d.com/Manual/AnatomyofaMesh.html
+https://en.wikipedia.org/wiki/Normal_(geometry)
+https://en.wikipedia.org/wiki/UV_mapping
+https://en.wikipedia.org/wiki/Normal_mapping
