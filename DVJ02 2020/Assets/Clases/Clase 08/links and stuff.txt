@@ -1,0 +1,100 @@
+Devoluciones:
+Todos
+====================
+Antes de ponerse a bajar assets hagan los requerimientos del trabajo.
+Evitar el uso de Magic numbers. (Ver Ghost.cs de Fermín)
+Early exit. (Ver Ghost.cs de Fermín)
+static variables. Prohibido su uso excepto situaciones muy particulares (ej: instancia del singleton)
+Prefijo UI a los scripts de UI (Carpeta propia en el proyecto)
+Si el GameManager es un singleton, para que hacer una referencia o un Find
+
+Iñaki
+====================
+Viene joya. Terminar.
+
+Nacho
+====================
+Hermoso nivel :). Terminar
+
+Fermín
+====================
+Muy bien!
+En principio no vamos a nombrar las carpetas "Resources", ese es un nombre reservado que maneja Unity (más adelante veremos porque).
+
+Sobre el proyecto:
+Porque tendrías 2 escenas con el mismo nivel y funcionalidad diferente. Si modificas algo en una escena tenés que modificar la otra.
+
+Sobre el codigo:
+Prefijo UI a los scripts de UI
+TextManager -> UIIngameHUD
+TextManagerEnd -> UIGameEndScreen
+
+GhostCreator
+BombCreator
+BossCreator
+no podrían heredar de algo? (ej: EnemySpawner) tienen funcionalidades muuy similares
+Lo mismo con los enemigos. Toda la cuestión de vida, velocidad, puntaje que da, etc puede setearse en una clase base Enemy.cs de la cual heredan los enemigos.
+
+MP9Ammo y MP9AmmoCarnage. De nuevo, clase base Ammo.
+
+Uso de prefabs para los enemigos.
+
+Los enemigos tienen toda la data privada. Si los creas como prefab y seteas esas variables como modificables del editor es mucho más simple pulir todo.
+De hecho es justamente por lo que los componentes se pueden modificar desde el inspector.
+
+
+Los scripts del juego no deberían conocer la UI. Es la UI la que conoce todo el juego.
+
+Player.cs
+Porque no un GameManager que guarde el score (enemigos destruidos) y esas cosas. Es propio del player o del juego.
+de hecho terminás usando unas variables estáticas para esto en StaticVariables.
+Atomizar scripts para simplificarlos: Player puede separarse en PlayerGun, PlayerScore...
+La condicion de ganar o perder, es propia del player o del juego? (GameManager?)
+Nombrado de métodos:
+Shoot -> da a entender que ya es la accion de disparar cuando en realidad el metodo esta checkeando los controles a ver si dispara o no.
+Método Die, ver en clase.
+
+De ahora en adelante tenés prohibido el uso de copy/paste :)
+
+
+Iker
+====================
+Viene joya. Terminar
+Skip.cs que viene a ser esto.
+Prefijo UI a los scripts de UI
+Spawner.cs
+        enemy.GetComponent<Enemy>().player = player;
+        Instantiate(enemy, currentSpawns);
+Cuidado con eso. Al hacer eso estas modificando el prefab de la carpeta del proyecto.		
+
+GameManager.cs::Update
+Diferencia entre un Evento específico y una pregunta constante.
+
+Lucio
+====================
+Viene joya, terminar.
+Sobre el proyecto. Mantenerlo mas simple. Ver en clase.
+GameManager -> Magic numbers
+UIManager
+Referenciar los objetos directamente en vez de buscarlos por nombre en el Update.
+
+
+Juan Cruz
+====================
+TP 04:
+NullReferenceException: Object reference not set to an instance of an object
+Game_Manager.checkPinsLeft () (at Assets/Scripts/Game_Manager.cs:80)
+Game_Manager.Update () (at Assets/Scripts/Game_Manager.cs:50)
+
+Nomenclatura de scripts:
+Ball_Movement -> BallMovement
+PlayButton -> MainMenu
+Prefijo UI a los scripts de UI
+Ball_Movement
+Fijate que al momento de hacer el launch le agregue una fuerza en ese momento, una fuerza inicial, no una fuerza constante todos los FixedUpdate.
+El movimiento lateral sería mejor usarlo sin física, con transform.position. Si no es incontrolable.
+el OR en el if es || y no | (son operaciones diferentes)
+Le faltó disparar a la Turret :O
+
+
+
