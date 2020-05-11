@@ -7,8 +7,11 @@ namespace DVJ02.Clase08
 {
 	public class EnemyUsingActions : MonoBehaviour
 	{
-	    //definicion básica de un Action
-	    //public delegate void Action<T>(T param);
+		//definicion básica de un Action
+		//public delegate void Action<T>(T param);
+		//public delegate void Action();
+		//public delegate void Action<T,S>(T param, S param); ...
+
 		//public delegate void PunteroAFuncion(string s);
 		//define el signature del delegate (delegate type)
 		//Action<string>
