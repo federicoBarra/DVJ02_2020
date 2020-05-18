@@ -1,0 +1,35 @@
+Bake lightning
+Mesh
+https://en.wikipedia.org/wiki/Polygon_mesh
+https://docs.unity3d.com/Manual/AnatomyofaMesh.html
+https://en.wikipedia.org/wiki/Normal_(geometry)
+https://en.wikipedia.org/wiki/UV_mapping
+
+Materials
+
+https://docs.unity3d.com/Manual/StandardShaderMaterialParameters.html
+https://docs.unity3d.com/Manual/StandardShaderMaterialParameterMetallic.html
+https://docs.unity3d.com/Manual/StandardShaderMaterialParameterSmoothness.html
+
+
+Normal Map
+normal mapping = bump mapping  
+Textura de colores, los colores son para saber como se refleja la luz, azul de arriba, rojo de la derecha
+https://en.wikipedia.org/wiki/Normal_mapping
+Height map - Mapa de alturas.
+https://en.wikipedia.org/wiki/Heightmap
+
+Diferencia principal
+While normal mapping modifies the lighting across the surface of the texture, parallax height mapping goes a step further and actually shifts the areas of the visible surface texture around, to achieve a kind of surface-level occlusion effect. This means that apparent bumps will have their near side (facing the camera) expanded and exaggerated, and their far side (facing away from the camera) will be reduced and seem to be occluded from view.
+https://docs.unity3d.com/Manual/StandardShaderMaterialParameterHeightMap.html
+
+PBR Settings cheat sheet
+https://docs.unity3d.com/Manual/StandardShaderMaterialCharts.html
+
+Infromación adicional
+https://cgcookie.com/articles/normal-vs-displacement-mapping-why-games-use-normals
+https://cgcookie.com/lesson/height-maps-vs-normal-maps
+
+Particles
+https://docs.unity3d.com/Manual/class-ParticleSystem.html
+https://docs.unity3d.com/Manual/shader-StandardParticleShaders.html
