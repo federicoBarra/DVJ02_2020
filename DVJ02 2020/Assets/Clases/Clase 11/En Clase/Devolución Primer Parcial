@@ -1,0 +1,126 @@
+Devolución Primer Parcial
+Para todos
+nombres claros en las variables.
+int aux;
+float temp;
+no explican que son.
+PREFIJO UI y separación de los scripts de UI en su carpeta. ButtonExtendido.cs NO!
+UIMainMenu.cs
+Tienen prohibido usar copy paste.
+Tienen prohibido usar variables static. A menos que sean casos muy particulares (Singleton, Eventos)
+
+Cuando un tp y parcial dice que algo debe ser editable desde el editor se refiere a desde el inpector
+Random infinito en while.
+Nombrado de variables. verbos y sustantivos, acciones.
+ifs infinitos.
+
+
+
+
+Iñaki - Aprobado
+====================================================================================================
+Player3rdPersonControl.cs
+GameplayController.chunkOffset el uso de static te impide modificarlo del editor.
+if (aux > 14 || aux < 6) Magic numbers, no tendría más sentido que dependan de chuckSize?
+
+float aux; -> Que es aux?
+
+if (aux > GameplayController.chunkSize && ver != 0) transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y, (transform.position.z) + ((GameplayController.chunkSize*2) - aux)), 0.1f);
+Evitemos las lineas tan largas que se vuelven dificiles de leer, usar variables temporales para simplificar la lectura.
+
+transform.position += movement * Time.deltaTime;
+En FixedUpdate() sería Time.fixedDeltaTime;
+
+GameManager.Get().GameOver(0); Usar eventos para estas cosas. El player no debe conocer el game.
+
+GameplayController.cs
+Esto podría separarse en dos scripts, uno que se encargue del nivel y otro de los enemigos
+InstantiateMap() if hell
+
+Bomb.cs
+explode() como podría eso simplificarse usando un for?
+
+Explotion.cs
+StartCoroutine(Die()); -> Destroy(go, tiempoEnElQueSeDestruye)
+
+Enemy.cs
+IEnumerator SetMovingDirection()
+Por que no todo ese checkeo en el update?
+
+Nacho - faltó terminar.
+====================================================================================================
+GameManager.cs
+public static bool gameOver; STATIC ñaca ñaca
+
+Player.cs
+El movimiento debería ser continuo. No con Lerp
+
+Viene bien, faltó terminar.
+
+Iker - Aprobado
+====================================================================================================
+Player.cs
+private void Update()
+{
+	if (!Dead)
+Ya hablamos de esto en clase.
+
+Bomb.cs
+void Update()
+{
+	if (player.GetComponent<Player>().isActive)
+Guarda con eso. No usar GetComponent en el Update(). Además, debería ser el player el que dice cuando se puede poner la bomba y cuando no.
+
+Enemy.cs
+Que es D_Wall?, nombres claros
+if (other.gameObject.layer == 8 || other.gameObject.layer == 9) ??? y esos numeros?
+
+GridSpawner.cs
+void SpawnInGrid() - Ver en clase
+
+Lucio - Aprobado
+====================================================================================================
+Player.cs
+[HideInInspector] public static int lives; STATIC ñaca ñaca
+
+Enemy.cs 
+Cuidado con las comparaciones entre float e int, potenciales problemas de precision
+
+ExplosionColumn y Explosion
+Porque ExplosionColumn para por Explosion para dañar a los actores.
+
+Explosion.cs
+Es necesario que conozca el nivel? No podría checkear collisiones y ya?
+
+Juan Cruz - faltó terminar
+====================================================================================================
+Carpetas como Library no deben estar en el repositorio
+Los enemigos spawnean encima mio. Tampoco me hacen daño (no me matan).
+No usar SendMessage
+
+SpawnBoxes.cs
+Esto tiene toda la pinta de ser un GameManager, debería llamarse así la clase.
+
+PlayerMovement.cs
+El player no debería conocer el manager
+
+Enemy.cs 
+if hell
+
+Fermín - Aprobado
+====================================================================================================
+Power ups - Porque no poner los chequeos directamente en el player
+
+Player.cs
+ IEnumerator Invincible() -> guarda con esto que esta haciendo una recursividad infinita.
+ 
+Bomb.cs
+Que pasa si el fuego de la bomba se debe expandir en 3 casilleros? en 10? 100?
+
+MapCreator.cs
+CreateGrass() -> 2 fors no?
+
+GhostCreator.cs
+emptyPositions = new bool[mapMaxLimitX, mapMaxLimitZ];
+emptyPositions = box.GetEmptyPositions();
+Guarda con eso, estas pidiendo una referencia, no es necesario el new bool[]
