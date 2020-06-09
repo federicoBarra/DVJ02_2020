@@ -1,0 +1,9 @@
+https://i.imgur.com/HaHgcv5.png
+https://docs.unity3d.com/Manual/class-SkinnedMeshRenderer.html
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/
+https://docs.unity3d.com/Manual/class-ScriptableObject.html
+https://docs.unity3d.com/ScriptReference/ScriptableObject.html
+https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html
+https://answers.unity.com/questions/161858/startstop-playmode-from-editor-script.html
+https://jsonformatter.curiousconcept.com/
+https://blogs.unity3d.com/wp-content/uploads/2016/10/image00-1.png
