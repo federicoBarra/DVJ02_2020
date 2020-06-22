@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Clases/Clase 07/03 Persistencia de informacion/DontDestroy 03 End.unity
     guid: 7e1a43b56d2608f43a973e6ee533bce9
+  - enabled: 1
+    path: Assets/Clases/Clase 11/02 Loader Example/Loader 01.unity
+    guid: 3fa8aa0b4a0af65488a3b59b5b28cab5
+  - enabled: 1
+    path: Assets/Clases/Clase 11/02 Loader Example/Loader 02.unity
+    guid: 94e96842819e8bf42954f3bf4285f811
   m_configObjects: {}

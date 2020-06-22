@@ -1,0 +1,28 @@
+https://en.wikipedia.org/wiki/Agile_software_development
+https://edelalon.com/blog/wp-content/uploads/2017/09/SCRUM.jpg
+https://en.wikipedia.org/wiki/Scrum_(software_development)
+https://en.wikipedia.org/wiki/User_story
+https://en.wikipedia.org/wiki/Planning_poker
+https://trello.com/
+https://catlikecoding.com/unity/tutorials/
+https://catlikecoding.com/unity/tutorials/basics/building-a-graph/
+
+
+Nave
+1.5hs
+Enemigo 01
+2.5hs
+Enemigo 02
+1.5hs
+Nivel 01
+1.8hs
+Parallax
+1hs
+Items
+2hs
+
+EXPLOTACIÓN ABSOLUTA 8 hs
+
+ESTIMADO 10.3hs
+
+EMPRESA COOL Y RELAJADA 15 hs

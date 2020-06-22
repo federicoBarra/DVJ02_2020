@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bola
   - TagPino
+  - Punch
+  - Damageable
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Esferas02
   - Esferas03
   - Plano
-  - 
+  - Chaibons
   - 
   - 
   - 
