@@ -6,6 +6,11 @@ public class Pino : MonoBehaviour
 {
 	private int masa;
 
+	void Start()
+	{
+		Debug.Log("Start");
+	}
+
 	public static int operator +(Pino b, Pino c)
 	{
 		return b.masa + c.masa;

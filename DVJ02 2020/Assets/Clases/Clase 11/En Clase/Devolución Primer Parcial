@@ -17,7 +17,7 @@ ifs infinitos.
 
 
 
-Iñaki - Aprobado
+Iñaki - Aprobado - 5
 ====================================================================================================
 Player3rdPersonControl.cs
 GameplayController.chunkOffset el uso de static te impide modificarlo del editor.
@@ -47,7 +47,7 @@ Enemy.cs
 IEnumerator SetMovingDirection()
 Por que no todo ese checkeo en el update?
 
-Nacho - faltó terminar.
+Nacho - faltó terminar. 2
 ====================================================================================================
 GameManager.cs
 public static bool gameOver; STATIC ñaca ñaca

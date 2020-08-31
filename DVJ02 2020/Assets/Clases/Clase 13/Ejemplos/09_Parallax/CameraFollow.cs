@@ -22,5 +22,11 @@ namespace DVJ02.Clase13
 		//corutina
 		//Time.timeScale = bulletTime.Evaluate(t);
 
+		//f(x) = sin(x)
+
+		//x = 0 - pi
+
+		//f(x) = 0 - 1
+			
 	}
 }
