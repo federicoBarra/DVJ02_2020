@@ -18,7 +18,7 @@ namespace DVJ02.Clase04
 
         private void OnTriggerStay(Collider other)
         {
-            Debug.Log(name + " OnTriggerStay " + other.gameObject.name);
+            //Debug.Log(name + " OnTriggerStay " + other.gameObject.name);
         }
     }
 }

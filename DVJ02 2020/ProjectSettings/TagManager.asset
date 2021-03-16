@@ -8,6 +8,7 @@ TagManager:
   - TagPino
   - Punch
   - Damageable
+  - pick
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Esferas03
   - Plano
   - Chaibons
-  - 
+  - DiezItem
   - 
   - 
   - 
